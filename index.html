@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>jQuery Functions Project</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" medis="screen" href="reset.css">
+    <link rel="stylesheet" type="text/css" medis="screen" href="style.css">
+    <script>
+        $(document).ready(function(){
+            $('#click').click(function(){
+                alert("Thank you for testing the .click jQuery function.");
+            })
+            $('#hide').click(function(){
+                $('#hideAndSeek').hide();
+            })
+            $('#show').click(function(){
+                $('#hideAndSeek').show();
+            })
+            $('#toggleButton').click(function(){
+                $('.toggle').toggle( "fast" );
+            })
+            $('#slideDown').click(function(){
+                $('#slide').slideDown( "slow" );
+            })
+            $('#slideUp').click(function(){
+                $('#slide').slideUp( "fast" );
+            })
+            $('#fadeIn').click(function(){
+                $('#fadeBox:hidden').fadeIn( "slow", function () {
+                    $('span').fadeIn();
+                });
+            });
+            $('#fadeOut').click(function(){
+                $('#fadeBox').fadeOut( "slow", function () {
+                    $('span').fadeOut();
+                });
+            });
+            $('#addClass').click(function(){
+                $('#class').addClass( "green" );
+            })
+            $('#removeClass').click(function(){
+                $('#class').removeClass( "green" );
+            })
+            $('#addBefore').click(function(){
+                $('#special').before( "<div class='pink'></div>" );
+            })
+            $('#addAfter').click(function(){
+                $('#special').after( "<div class='pink'></div>" );
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="functionBox">
+            <h2>Click</h2> <!--CLICK FUNCTION-->
+            <button id="click">Click Me!</button>
+        </div>
+        <hr>
+        <div class="functionBox">
+            <h2 id="hideAndSeek">Hide &amp; Show</h2> <!--HIDE & SHOW FUNCTIONS-->
+            <button id="hide">Hide</button>
+            <button id="show">Show</button>
+        </div>
+        <hr>
+        <div class="functionBox">
+            <h2 class="toggle">Toggle</h2> <!--TOGGLE FUNCTION-->
+            <h2 style="display: none" class="toggle">Hey, Nice Toggle!</h2>
+            <button id="toggleButton">Toggle</button>
+        </div>
+        <hr>
+        <div class="functionBox">
+            <h2 id="slide">Slide Down &amp; Up</h2> <!--SLIDE UP & SLIDE DOWN FUNCTIONS-->
+            <button id="slideDown">Slide Down</button>
+            <button id="slideUp">Slide Up</button>
+        </div>
+        <hr>
+        <div class="functionBox">
+            <h2 id="fade">Fade &amp; Fade out</h2> <!--FADE IN & FADE OUT FUNCTIONS-->
+            <button id="fadeIn">Fade In</button>
+            <button id="fadeOut">Fade Out</button>
+            <div id="fadeBox"><span>Well hello there!</span></div>
+        </div>
+        <hr>
+        <div class="functionBox">
+            <h2 id="class">Add &amp; Remove Class</h2> <!--ADD CLASS & REMOVE CLASS FUNCTIONS-->
+            <button id="addClass">Add Class</button>
+            <button id="removeClass">Remove Class</button>
+        </div>
+        <hr id ="special">
+        <div class="functionBox">
+            <h2 id="beforeAndAfter">Add &amp; Remove Class</h2> <!--ADD CLASS & REMOVE CLASS FUNCTIONS-->
+            <button id="addBefore">Before</button>
+            <button id="addAfter">After</button>
+        </div>
+        <hr>
+    </div>
+</body>
+</html>
