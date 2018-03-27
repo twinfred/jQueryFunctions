@@ -3,66 +3,9 @@
 <head>
     <title>jQuery Functions Project</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="script.js"></script>
     <link rel="stylesheet" type="text/css" medis="screen" href="reset.css">
     <link rel="stylesheet" type="text/css" medis="screen" href="style.css">
-    <script>
-        $(document).ready(function(){
-            $('#click').click(function(){
-                alert("Thank you for testing the .click jQuery function.");
-            })
-            $('#hide').click(function(){
-                $('#hideAndSeek').hide();
-            })
-            $('#show').click(function(){
-                $('#hideAndSeek').show();
-            })
-            $('#toggleButton').click(function(){
-                $('.toggle').toggle( "fast" );
-            })
-            $('#slideDown').click(function(){
-                $('#slide').slideDown( "slow" );
-            })
-            $('#slideUp').click(function(){
-                $('#slide').slideUp( "fast" );
-            })
-            $('#fadeIn').click(function(){
-                $('#fadeBox:hidden').fadeIn( "slow", function () {
-                    $('span').fadeIn();
-                });
-            });
-            $('#fadeOut').click(function(){
-                $('#fadeBox').fadeOut( "slow", function () {
-                    $('span').fadeOut();
-                });
-            });
-            $('#addClass').click(function(){
-                $('#class').addClass( "green" );
-            })
-            $('#removeClass').click(function(){
-                $('#class').removeClass( "green" );
-            })
-            $('#addBefore').click(function(){
-                $('#special').before( "<div class='pink'></div>" );
-            })
-            $('#addAfter').click(function(){
-                $('#special').after( "<div class='pink'></div>" );
-            })
-            var jokeAnswer= 1;
-            $('#jokeAnswer').click(function(){
-                if(jokeAnswer === 1){
-                    $('#joke').append( " Tooth-hurty!" );
-                    jokeAnswer--;
-                }
-            })
-            var funnyGif= 1;
-            $('#showMeTheGif').click(function(){
-                if(funnyGif === 1){
-                    $('#gif').html( "<img id='funnyGif' src='http://teamjimmyjoe.com/wp-content/uploads/2016/11/trump-clinton-godzilla-funny-gifs.gif' alt='funny gif'>" );
-                    funnyGif--;
-                }
-            })
-        })
-    </script>
 </head>
 <body>
     <div id="wrapper">
@@ -93,7 +36,7 @@
             <h2 id="fade">Fade &amp; Fade out</h2> <!--FADE IN & FADE OUT FUNCTIONS-->
             <button id="fadeIn">Fade In</button>
             <button id="fadeOut">Fade Out</button>
-            <div id="fadeBox"><span>Well hello there!</span></div>
+            <div id="fadeBox"><span id="fadeBar">Well hello there!</span></div>
         </div>
         <hr>
         <div class="functionBox">
@@ -121,6 +64,31 @@
             <div id="gif"></div>
         </div>
         <hr>
+        <div class="functionBoxLrg">
+            <h2 id="attribute">Attribute</h2> <!--ATTRIBUTE FUNCTION-->
+            <p>Can you guess the "class" attribute of this <span id="attributeClass" class="green">WORD</span>?</p>
+            <p id="AttrAns">Answer: </p>
+            <button id="attributeAnswer">Are you right?</button>
+        </div>
+        <hr>
+        <div class="functionBoxBig">
+            <h2 id="value">Value</h2> <!--VALUE FUNCTION-->
+            <p>I just bought a parrot that likes to mock people! Type in the text box below to meet him.</p>
+            <img src="https://peopledotcom.files.wordpress.com/2016/11/parrot.jpg" id="parrot" alt="parrot">
+            <input id="valueTextBox" type="text">
+            <p id="valueImitate"></p>
+        </div>
+        <hr>
+        <div class="functionBoxBig">
+                <h2 id="value">DATA</h2> <!--DATA FUNCTION-->
+                <p>Do you think pineapple works on pizza?</p>
+                <p class="small">Choose wisely because you cannot change your answer.</p>
+                <button class="pineappleBtn" id="yesPineapple">Yes!</button>
+                <button class="pineappleBtn" id="noPineapple">No!</button>
+                <p id="pineappleAnswer" style="font-weight: bold;">Your answer: </p>
+                <p id="friends">Can we be friends? </p>
+                <p id="smart">Are you smart? </p>
+            </div>
     </div>
 </body>
 </html>
