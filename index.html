@@ -47,6 +47,20 @@
             $('#addAfter').click(function(){
                 $('#special').after( "<div class='pink'></div>" );
             })
+            var jokeAnswer= 1;
+            $('#jokeAnswer').click(function(){
+                if(jokeAnswer === 1){
+                    $('#joke').append( " Tooth-hurty!" );
+                    jokeAnswer--;
+                }
+            })
+            var funnyGif= 1;
+            $('#showMeTheGif').click(function(){
+                if(funnyGif === 1){
+                    $('#gif').html( "<img id='funnyGif' src='http://teamjimmyjoe.com/wp-content/uploads/2016/11/trump-clinton-godzilla-funny-gifs.gif' alt='funny gif'>" );
+                    funnyGif--;
+                }
+            })
         })
     </script>
 </head>
@@ -89,9 +103,22 @@
         </div>
         <hr id ="special">
         <div class="functionBox">
-            <h2 id="beforeAndAfter">Add &amp; Remove Class</h2> <!--ADD CLASS & REMOVE CLASS FUNCTIONS-->
+            <h2 id="beforeAndAfter">Before &amp; After</h2> <!--BEFORE & AFTER FUNCTIONS-->
             <button id="addBefore">Before</button>
             <button id="addAfter">After</button>
+        </div>
+        <hr>
+        <div class="functionBoxMed">
+            <h2 id="append">Append</h2> <!--APPEND FUNCTION-->
+            <p id="joke">What time is your dentist appointment?</p>
+            <button id="jokeAnswer">Joke Answer</button>
+        </div>
+        <hr>
+        <div class="functionBoxBig">
+            <h2 id="html">HTML</h2> <!--HTML FUNCTION-->
+            <p id="joke2">Hey, wanna see a funny GIF?</p>
+            <button id="showMeTheGif">Yes please!</button>
+            <div id="gif"></div>
         </div>
         <hr>
     </div>

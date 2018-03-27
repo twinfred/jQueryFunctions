@@ -9,6 +9,12 @@
 .functionBox {
     height: 120px;
 }
+.functionBoxMed {
+    height: 140px;
+}
+.functionBoxBig {
+    height: 340px;
+}
 h2, button, span, p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -16,6 +22,11 @@ h2 {
     font-weight: bold;
     font-size: 40px;
     line-height: 60px;
+}
+p {
+    font-size: 16px;
+    line-height: 20px;
+    margin: 5px 0px 15px 0px;
 }
 button {
     background-color: black;
@@ -56,4 +67,8 @@ span {
     height: 30px;
     margin: 10px 0px;
     padding: 0px 10px;
+}
+#funnyGif {
+    width: 335px;
+    margin: 10px
 }
